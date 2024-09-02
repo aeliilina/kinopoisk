@@ -20,7 +20,7 @@ export default function SignUp() {
         email: {
             value: '',
             error: false,
-            pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[cC][oO][mM]$/  
+            pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[cC][oO][mM]$/
         }
     })
 

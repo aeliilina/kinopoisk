@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import React from 'react';
 
-export default function SliderComponent(){
+export default function SliderComponent({data}){
 
     const pagination = {
         clickable: true,
@@ -15,21 +15,21 @@ export default function SliderComponent(){
           return '<span class="' + className + '">' + (index + 1) + '</span>';
         },
       };
+
       
     return(
         <div>
             <h1>Slider</h1>
         <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            slidesPerView={2}
+            slidesPerView={1}
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
-
+            pagination={pagination}
         >
-        <SwiperSlide><div className="bg-orange-300 w-full h-[300px]">Slide 1</div></SwiperSlide>
-        <SwiperSlide><div className="bg-yellow-300 w-full h-[300px]">Slide 2</div></SwiperSlide>
-        <SwiperSlide><div className="bg-lime-300 w-full h-[300px]">Slide 3</div></SwiperSlide>
-        <SwiperSlide><div className="bg-green-300 w-full h-[300px]">Slide 4</div></SwiperSlide>      
+            {data?.map((item) => (
+                <SwiperSlide key={item.id}><div style={{backgroundImage: `url(https://baktyiar.pythonanywhere.com/${item.poster})`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}} className="w-full h-[1600px]"></div></SwiperSlide>     
+            ))}
         </Swiper>
     </div>
     )
