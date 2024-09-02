@@ -10,17 +10,17 @@ export default function SignUp() {
         username: {
             value: '',
             error: false,
-            pattern: /^[a-zA-Z0-9_]{3,}$/  // Минимум 3 символа, буквы, цифры и подчеркивания
+            pattern: /^[a-zA-Z0-9_]{3,}$/  
         },
         phone_number: {
             value: '',
             error: false,
-            pattern: /^\+996 \d{3} \d{2}-\d{2}-\d{2}$/  // Формат для телефонного номера
+            pattern: /^\+996 \d{3} \d{2}-\d{2}-\d{2}$/ 
         },
         email: {
             value: '',
             error: false,
-            pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[cC][oO][mM]$/  // Должен содержать @ и заканчиваться на .com
+            pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[cC][oO][mM]$/  
         }
     })
 
@@ -102,7 +102,7 @@ export default function SignUp() {
                 <div className="flex flex-col gap-[12px] mt-[36px]">
                     <Input
                         status={authData.phone_number.error ? 'error' : ''}
-                        placeholder="Phone Number"  // Обновлено здесь
+                        placeholder="Phone Number"  
                         value={authData.phone_number.value}
                         onChange={(e) => handleChange('phone_number', e.target.value)}
                     />
