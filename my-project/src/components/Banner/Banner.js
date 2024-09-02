@@ -1,4 +1,4 @@
-import Main from "@/app/main/page"
+import Main from "@/app/page";
 
 export default async function Banner() {
     // Загружаем данные
@@ -11,7 +11,7 @@ export default async function Banner() {
             <div
                 className="relative w-full h-0 pb-[56.25%] bg-gray-900 overflow-hidden rounded-lg"
                 style={{
-                    backgroundImage: `url(https://baktyiar.pythonanywhere.com/${banners[0]?.banner_image})`,
+                    backgroundImage: `url(https://baktyiar.pythonanywhere.com/${banners[1]?.banner_image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     cursor:'pointer'

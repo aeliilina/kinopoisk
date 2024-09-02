@@ -1,18 +1,21 @@
-import Header from "@/components/Header"
-import Main from "./main/page"
-import Footer from "@/components/Footer"
+import Header from "@/components/Header";
+import Banner from "@/components/Banner"; 
+import Films from "@/components/Films"; 
+import Serials from "@/components/Serials"; 
+import Footer from "@/components/Footer";
 
 
 
- 
- export default function Home(){
-
-    return (
+export default function Main(){
+    return(
         <>
-            <Header />
-            <Main />
-            <Footer />
+        <Header />
+        <Banner />
+        <Films />
+        <Serials />
+        <Footer />
         </>
     )
 }
+
 

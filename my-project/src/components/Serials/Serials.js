@@ -1,4 +1,4 @@
-import Main from "@/app/main/page"
+import Main from "@/app/page";
 
 export default async function Serials() {
     const kinoData = await fetch('https://baktyiar.pythonanywhere.com/api/index/');
