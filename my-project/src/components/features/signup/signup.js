@@ -20,11 +20,7 @@ export default function SignUp() {
         email: {
             value: '',
             error: false,
-<<<<<<< HEAD
-            pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[cC][oO][mM]$/
-=======
             pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[cC][oO][mM]$/  // Должен содержать @ и заканчиваться на .com
->>>>>>> parent of b3d0ab0 (first commit)
         }
     })
 
