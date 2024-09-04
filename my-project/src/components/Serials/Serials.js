@@ -8,8 +8,8 @@ export default async function Serials() {
     return (
         
         <div className="p-4" >
-        <h1>Сериалы</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <h1 className='font-bold text-2xl pb-[10px] text-center'>Сериалы</h1>
+            <div className="flex flex-wrap justify-center gap">
                 {serials.map((serial) => (
                     <div key={serial.id} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
 

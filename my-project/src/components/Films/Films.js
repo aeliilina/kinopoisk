@@ -1,5 +1,4 @@
 import SliderComponent from "../UI/sliderComponent/sliderComponent";
-import Main from "@/app/page";
 
 
 export default async function Films() {
@@ -9,8 +8,8 @@ export default async function Films() {
 
     return (
         <div className="p-4">
-            <h1>Фильмы</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <h1  className='font-bold text-2xl pb-[10px] text-center'>Фильмы</h1>
+            <div className="flex flex-wrap justify-center gap">
                 {movies.map((movie) => (
                     <div key={movie.id} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out max-w-xs">
                         {/* <img
