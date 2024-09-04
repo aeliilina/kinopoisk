@@ -5,36 +5,44 @@ import SignUp from "../features/signup/signup";
 
 export default function Header() {
     return (
-        <header className="bg-gray-900 text-white shadow-md">
+        <header className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50">
             <nav className="container mx-auto flex items-center justify-between p-4">
-
                 <div className="flex items-center space-x-4">
-                    <Image 
-                        src="/kinopoisk.svg" 
-                        alt="Лого" 
-                        width={80} 
-                        height={40} 
-                        className="w-auto h-6 cursor-pointer" 
-                    />
+                    <Link href="/">
+                        <Image 
+                            src="/kinopoisk.svg" 
+                            alt="Лого" 
+                            width={80} 
+                            height={40} 
+                            className="w-auto h-6 cursor-pointer" 
+                        />
+                    </Link>
                     <Image 
                         src="/earth.gif" 
-                        alt="animation" 
+                        alt="Анимация" 
                         width={50} 
                         height={50} 
-                        className="w-25 h-25 cursor-pointer" 
+                        className="w-12 h-12 cursor-pointer" 
                     />
                 </div>
                 
                 <div className="flex-grow flex items-center space-x-6 justify-center">
-                    <Link href={"/movies"}><p className="flex-grow text-center cursor-pointer hover:text-gray-400 transition">Фильмы</p></Link>
-                    <Link href={"/series"}><p className="flex-grow text-center cursor-pointer hover:text-gray-400 transition">Сериалы</p></Link>
-                    <Link href={"/search"}><p className="flex-grow text-center cursor-pointer hover:text-gray-400 transition">Поиск</p></Link>
+                    <Link href="/movies">
+                        <p className="text-center cursor-pointer hover:text-gray-400 transition">Фильмы</p>
+                    </Link>
+                    <Link href="/series">
+                        <p className="text-center cursor-pointer hover:text-gray-400 transition">Сериалы</p>
+                    </Link>
+                    <Link href="/search">
+                        <p className="text-center cursor-pointer hover:text-gray-400 transition">Поиск</p>
+                    </Link>
                     <SignUp />
                 </div>
             </nav>
         </header>
     );
 }
+
 
 
 

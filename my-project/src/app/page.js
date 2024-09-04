@@ -9,11 +9,9 @@ import Footer from "@/components/Footer";
 export default function Main(){
     return(
         <>
-        <Header />
         <Banner />
         <Films />
         <Serials />
-        <Footer />
         </>
     )
 }
