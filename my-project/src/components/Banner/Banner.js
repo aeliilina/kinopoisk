@@ -1,4 +1,3 @@
-import Main from "@/app/page";
 
 export default async function Banner() {
    
